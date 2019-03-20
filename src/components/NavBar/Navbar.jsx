@@ -1,19 +1,16 @@
 import React from 'react';
 import NavB_style from './Navbar.module.css'
 import Rooms from './rooms/Rooms';
-import Charts from './charts/Charts';
-import Control from './control/Control';
-import Scenary from './scenery/Scenery';
-import ClimateRooms from './climate_rooms/Climate_Rooms';
+
 
 const Navbar = () =>{
     return(
         <div className={NavB_style.Navbar}>
-            <Rooms/>
-            <ClimateRooms/>
-            <Charts/>
-            <Scenary/>
-            <Control/>
+            <Rooms link="rooms" category="кімнати" />
+            <Rooms link="climate" category=" Клімат кімнат" />
+            <Rooms link="charts" category="Графіки" />
+            <Rooms link="scenary" category="Сценарії" />
+            <Rooms link="rooms" category="Безпека" />
         </div>
     );
 }
